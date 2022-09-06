@@ -2,6 +2,6 @@ Def pred = P[1,2] >> K[0];
 
 Def add = (S . P[3,3]) >> P[1,1];
 
-Def sub = (dec . P[1,3]) >> P[1,1];
+Def sub = (pred . P[1,3]) >> P[1,1];
 
 Def mult = (add ..(P[1,3], P[3,3])) >> K[0];
