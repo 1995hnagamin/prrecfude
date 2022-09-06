@@ -1,9 +1,9 @@
 PROGRAM = prrecfude
 
 FILES[] =
-	lexer
-	parser
 	syntax
+	parser
+	lexer
 	prrecfude
 
 OCamlGeneratedFiles(lexer.ml parser.mli parser.ml)
@@ -12,6 +12,9 @@ OCamlProgram($(PROGRAM), $(FILES))
 
 .DEFAULT: $(if $(BYTE_ENABLED), $(PROGRAM).run) \
 	$(if $(NATIVE_ENABLED), $(PROGRAM).opt)
+
+MENHIR_ENABLED = true
+MENHIR_FLAGS += --infer
 
 .PHONY: distclean
 
