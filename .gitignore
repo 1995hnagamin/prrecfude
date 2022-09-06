@@ -1,0 +1,7 @@
+.omakedb
+.omakedb.lock
+*.omc
+*.cmi
+*.cmx
+*.o
+*.opt

@@ -1,0 +1,9 @@
+PROGRAM = prrecfude
+
+FILES[] =
+	prrecfude
+
+OCamlProgram($(PROGRAM), $(FILES))
+
+.DEFAULT: $(if $(BYTE_ENABLED), $(PROGRAM).run) \
+	$(if $(NATIVE_ENABLED), $(PROGRAM).opt)
