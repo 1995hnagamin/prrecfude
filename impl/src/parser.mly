@@ -21,6 +21,7 @@ Expr :
 | e=CompExpr { e }
 | e=PrimRecExpr { e }
 | LPAREN e=Expr RPAREN { e }
+| id=ID { Var(id) }
 
 Predef :
 | P LBRAKET i=INTV COMMA n=INTV RBRAKET { Proj(i, n) }
