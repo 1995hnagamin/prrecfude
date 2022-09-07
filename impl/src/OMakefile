@@ -4,6 +4,7 @@ FILES[] =
 	syntax
 	parser
 	lexer
+	mathml
 	prrecfude
 
 OCamlGeneratedFiles(lexer.ml parser.mli parser.ml)
@@ -15,6 +16,10 @@ OCamlProgram($(PROGRAM), $(FILES))
 
 MENHIR_ENABLED = true
 MENHIR_FLAGS += --infer
+
+USE_OCAMLFIND = true
+OCAMLPACKS[] =
+	xml-light
 
 .PHONY: distclean
 
